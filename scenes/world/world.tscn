@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2jabkido7xg"]
+
+[ext_resource type="PackedScene" uid="uid://2fdy0bdbwrui" path="res://scenes/target/target.tscn" id="1_u2l00"]
+[ext_resource type="PackedScene" uid="uid://c67htjbssxtjf" path="res://scenes/manager/weapon_manager.tscn" id="1_wl5s2"]
+
+[node name="World" type="Node2D"]
+
+[node name="WeaponManager" parent="." instance=ExtResource("1_wl5s2")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2000.0
+offset_top = -1000.0
+offset_right = 2000.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.721569, 0.815686, 1, 1)
+
+[node name="Target" parent="." instance=ExtResource("1_u2l00")]

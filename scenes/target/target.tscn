@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://2fdy0bdbwrui"]
+
+[ext_resource type="Texture2D" uid="uid://qm8xs7slvg73" path="res://assets/target.png" id="1_2i6wm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2hfw"]
+radius = 2.0
+
+[node name="Target" type="Node2D" groups=["target"]]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_2i6wm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(1.01961, 1)
+shape = SubResource("CircleShape2D_h2hfw")

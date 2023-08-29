@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c67htjbssxtjf"]
+
+[ext_resource type="Script" path="res://scenes/manager/weapon_manager.gd" id="1_rymqj"]
+[ext_resource type="PackedScene" uid="uid://ckcygqcrnt8h5" path="res://scenes/weapon/weapon.tscn" id="2_tpol6"]
+
+[node name="WeaponManager" type="Node"]
+script = ExtResource("1_rymqj")
+basic_weapon_scene = ExtResource("2_tpol6")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
